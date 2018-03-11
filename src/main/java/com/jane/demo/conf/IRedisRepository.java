@@ -1,4 +1,4 @@
-package com.jane.demo.redis;
+package com.jane.demo.conf;
 
 /**
  * 设置Redis表,将缓存信息存入对应的表中

@@ -1,8 +1,8 @@
-package com.jane.demo.redis.impl;
+package com.jane.demo.conf.impl;
 
 import com.alibaba.fastjson.JSON;
-import com.jane.demo.redis.IReadRedisRepository;
-import com.jane.demo.redis.IWriteRedisRepository;
+import com.jane.demo.conf.IReadRedisRepository;
+import com.jane.demo.conf.IWriteRedisRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.HashOperations;
 import org.springframework.data.redis.core.StringRedisTemplate;

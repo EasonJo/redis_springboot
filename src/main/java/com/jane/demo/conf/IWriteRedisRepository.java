@@ -1,4 +1,4 @@
-package com.jane.demo.redis;
+package com.jane.demo.conf;
 
 /**
  * 缓存写操作

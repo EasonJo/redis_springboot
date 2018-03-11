@@ -1,4 +1,4 @@
-package com.jane.demo.redis;
+package com.jane.demo.conf;
 
 import java.util.List;
 import java.util.Set;

@@ -1,4 +1,4 @@
-package com.jane.demo.redis.config;
+package com.jane.demo.conf.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
