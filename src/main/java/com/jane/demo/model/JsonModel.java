@@ -30,4 +30,9 @@ public class JsonModel {
         this.msg = msg;
     }
 
+    public JsonModel(int code, Object object) {
+        this.code = code;
+        this.object = object;
+    }
+
 }

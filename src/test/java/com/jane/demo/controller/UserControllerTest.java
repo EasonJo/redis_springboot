@@ -3,6 +3,7 @@ package com.jane.demo.controller;
 import com.alibaba.fastjson.JSONObject;
 import com.jane.demo.entity.User;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +28,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class userControllerTest {
+public class UserControllerTest {
     /** 模拟MVC对象*/
     private MockMvc mockMvc;
 
@@ -45,6 +46,7 @@ public class userControllerTest {
      * @throws Exception
      */
     @Test
+    @Ignore
     public void testCreate()throws Exception{
         User user = new User();
         user.setName("JunitTest");
@@ -64,11 +66,25 @@ public class userControllerTest {
      * @throws Exception
      */
     @Test
+    @Ignore
     public void testWeb()throws Exception {
         String result = mockMvc.perform(get("/user/test").contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                     .andReturn().getResponse().getContentAsString();
         System.out.println("-------返回的JSON:" + result);
 
+    }
+
+    /**
+     * 测试getOne
+     * @throws Exception
+     */
+    @Test
+    public void testGetOne()throws Exception {
+        MvcResult result = mockMvc.perform(get("/user/getOne").contentType(MediaType.APPLICATION_JSON)
+                .param("loginName","jane"))
+                    .andExpect(status().isOk())
+                    .andReturn();
+        System.out.println(result.getResponse().getContentAsString());
     }
 }

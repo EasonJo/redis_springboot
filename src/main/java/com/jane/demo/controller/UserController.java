@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/user")
-public class userController {
+public class UserController {
 
     @Autowired
     private UserService userService;
@@ -33,6 +33,10 @@ public class userController {
         }else {
             return new JsonModel(304,"已存在，无法添加！");
         }
+    }
+    @RequestMapping(value = "/getOne", method = RequestMethod.GET)
+    public JsonModel get(String loginName){
+        return new JsonModel(200, userService.getUser(loginName),"成功");
     }
 
 

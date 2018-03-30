@@ -18,10 +18,10 @@ public class RedisConf {
     /**
      * 实例化 HashOperations 对象,可以使用 Hash 类型操作
      */
-    @Bean
+    /*@Bean
     public HashOperations<String, String, String> hashOperations() {
         return redisTemplate.opsForHash();
-    }
+    }*/
 
     /**
      * 实例化 ValueOperations 对象,可以使用 String 操作
